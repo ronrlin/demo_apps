@@ -23,8 +23,15 @@
     },
 
     showIframe: function(dimensions) {
-      // ticket should be used later to share information with cardcom agent dash
-      var ticket = this.ticket();
+      // @todo: ticket should be used to share information with cardcom agent dash
+      var ticket;
+      if (this.ticket() == null) {
+        // @todo: figure this out later
+      }
+      else {
+        ticket = this.ticket();
+      }
+
       var cUser = this.currentUser();
       var url="//www.card.com/zendesk/agent?uid=" + cUser.id();
       this.switchTo('iframePage', {
