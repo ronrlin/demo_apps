@@ -1,0 +1,12 @@
+{
+  "name": "Card.com Agent",
+  "author": {
+    "name": "Ron Lin",
+    "email": "ron@card.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": ["nav_bar", "top_bar", "user_sidebar", "ticket_sidebar", "new_ticket_sidebar"],
+  "version": "1.0",
+  "frameworkVersion": "1.0"
+}
