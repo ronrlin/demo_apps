@@ -24,16 +24,10 @@
 
     showIframe: function(dimensions) {
       // @todo: ticket should be used to share information with cardcom agent dash
-      var ticket;
-      if (this.ticket() == null) {
-        // @todo: figure this out later
-      }
-      else {
-        ticket = this.ticket();
-      }
-
-      var cUser = this.currentUser();
-      var url="//www.card.com/zendesk/agent?uid=" + cUser.id();
+      // http://developer.zendesk.com/documentation/apps/reference/data.html#user-object
+      var agent = this.currentUser();
+      var user = this.user();
+      var url="//www.card.com/zendesk/agent?uid=" + user.externalId();
       this.switchTo('iframePage', {
         dimension: dimensions,
         href: url
