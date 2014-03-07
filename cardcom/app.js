@@ -12,7 +12,7 @@
 
     init: function(data){ //load content if app is at new_ticket_sidebar, ticket_sidebar and user_sidebar
       if (data.firstLoad && SIDE_BAR_REGEX.test(this.currentLocation())) {
-        this.showIframe({ width: '300px', height: '260px' });
+        this.showIframe({ width: '300px', height: '500px' });
       }
     },
 
@@ -27,7 +27,7 @@
       // http://developer.zendesk.com/documentation/apps/reference/data.html#user-object
       var agent = this.currentUser();
       var user = this.user();
-      var url="//www.card.com/zendesk/agent?uid=" + user.externalId();
+      var url="//www.card.com/zendesk/agent?uid=" + user.externalId() + "&email=" + this.user().email();
       this.switchTo('iframePage', {
         dimension: dimensions,
         href: url
