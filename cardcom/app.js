@@ -27,7 +27,7 @@
       // http://developer.zendesk.com/documentation/apps/reference/data.html#user-object
       var agent = this.currentUser();
       var user = this.user();
-      var url="//www.card.com/zendesk/agent?uid=" + user.externalId() + "&email=" + this.user().email();
+      var url="//www.card.com/zendesk/agent?uid=" + user.externalId() + "&email=" + user.email() + "&zid=" + user.id();
       this.switchTo('iframePage', {
         dimension: dimensions,
         href: url
